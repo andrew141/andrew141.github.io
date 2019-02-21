@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Andrej Hoferica, FIIT STU"
+title: "Andrej Hoferica, FIIT STU, Launches Site"
 date: 2019-02-21
 ---
 
