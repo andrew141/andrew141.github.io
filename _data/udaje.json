@@ -24,7 +24,7 @@ hlavne_polozky: [
 		meno: 'ZAMESTNANIA',
 		polozky: [
 			{
-				titulok: 'EMIS, s.r.o. (jún 2018 - august 2018)',
+				titulok: 'EMIS, s.r.o. (06/2018 - 08/2018)',
 				popisy: [
 					{
 						titulok: 'Junior developer, vývoj webovej aplikácie pre Národnú diaľničnú spoločnosť'
