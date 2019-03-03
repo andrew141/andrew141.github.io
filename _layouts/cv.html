@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{{ content }}
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+</style>
+</head>
+
+
+
+{% for hlavna_polozka in site.data.udaje.hlavne_polozky %}
+	<br>
+	<br>	
+	<h2 style="color: #6E6E6E; font-size: 1.5em;">{{ hlavna_polozka.meno }}</h2>
+	<hr style="background-color: #6E6E6E; color: #6E6E6E; height: 3px;">
+	{% for polozka in hlavna_polozka.polozky %}
+		<div class="row" style="min-height: 50px;">
+			<div class="column" style="width: 25%; text-align: right;">
+				<br><b>{{ polozka.titulok }}</b>
+			</div>
+
+			<div class="column" style="width: 75%;">	
+				{% for popis in polozka.popisy %}
+					<p style="line-height: 1.0em;">{{ popis.titulok }}</p>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}	
+{% endfor %}
+
+
+
+

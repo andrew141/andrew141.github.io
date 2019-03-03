@@ -1,0 +1,95 @@
+hlavne_polozky: [
+	{
+		meno: 'VZDELANIE',
+		polozky: [
+			{
+				titulok: '2016 - ',
+				popisy: [
+					{
+						titulok: 'Fakulta informatiky a informačných technológií, Slovenská technická univerzita v Bratislave, odbor Informatika'
+					}
+				]
+			},
+			{
+				titulok: '2012 - 2016',
+				popisy: [
+					{
+						titulok: 'Gymnázium, Ul. Školská 234/8, Považská Bystrica'
+					}
+				]
+			}
+		]
+	},
+	{
+		meno: 'ZAMESTNANIA',
+		polozky: [
+			{
+				titulok: 'EMIS, s.r.o. (jún 2018 - august 2018)',
+				popisy: [
+					{
+						titulok: 'Junior developer, vývoj webovej aplikácie pre Národnú diaľničnú spoločnosť'
+					}
+				]
+			}
+		]
+	},
+	{
+		meno: 'ZNALOSTI',
+		polozky: [
+			{
+				titulok: 'Jazykové znalosti',
+				popisy: [
+					{
+						titulok: 'Anglický jazyk - Stredne pokročilý (B2)'
+					},
+					{
+						titulok: 'Španielsky jazyk - Mierne pokročilý (B1)'
+					}
+				]
+			},
+			{
+				titulok: 'Ostatné znalosti',
+				popisy: [
+					{ 
+						titulok: 'C - pokročilý'
+					},
+					{ 
+						titulok: 'Python - základy'
+					},
+					{ 
+						titulok: 'Java - základy'
+					},
+					{ 
+						titulok: 'PostgreSQL - základy'
+					},
+					{ 
+						titulok: 'Assembler - základy'
+					},
+					{ 
+						titulok: 'macOS - expert'
+					},
+					{ 
+						titulok: 'Microsoft Windows - pokročilý'
+					},
+					{ 
+						titulok: 'Pascal - základy'
+					},
+					{ 
+						titulok: 'Bash - základy'
+					},
+					{ 
+						titulok: 'Microsoft Word - pokročilý'
+					},
+					{ 
+						titulok: 'Microsoft Excel - pokročilý'
+					},
+					{ 
+						titulok: 'Adobe Photoshop - základy'
+					}
+				
+				]
+			}
+		]
+	}
+	
+]
