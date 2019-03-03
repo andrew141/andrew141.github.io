@@ -1,0 +1,13 @@
+---
+layout: gallery
+images:
+  - image_path: /data/album/ne_orig_37701674_domy-rodinny-dom-banska-bystrica-jedinecna-rodinna-vila-v-tichom-prostredi.jpg
+    title: Apple Pie
+---
+
+<ul class="photo-gallery">
+  {% for image in page.images %}
+  	<p>{{ image.image_path }}</p>
+    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
+  {% endfor %}
+</ul>
