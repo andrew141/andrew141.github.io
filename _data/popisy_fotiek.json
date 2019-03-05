@@ -1,0 +1,84 @@
+metadata: [
+	{
+		hlavny_text: 'Chalkidiki - Sithonia',
+		rozsireny_text: 'Sarti, Chalkidiki - Sithonia, Grécko',
+		text_obrazok: '2014'
+	},
+	{
+		hlavny_text: 'Mayrhofner Bergbahnen',
+		rozsireny_text: 'Mayrhofen, Zillertal, Rakúsko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Hintertuxer Gletscher',
+		rozsireny_text: 'Hintertux, Zillertal, Rakúsko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Hintertuxer Gletscher',
+		rozsireny_text: 'Hintertux, Zillertal, Rakúsko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Kefalónia',
+		rozsireny_text: 'Fiskardo, Kefalónia, Grécko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Zakynthos',
+		rozsireny_text: 'Agios Nikolaos, Zakynthos, Grécko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Lefkada',
+		rozsireny_text: 'Kathisma Beach, Lefkada, Grécko',
+		text_obrazok: '2015'
+	},
+	{
+		hlavny_text: 'Les Arcs',
+		rozsireny_text: 'Les Arcs, Peisey-Vallandry, Francúzsko',
+		text_obrazok: '2016'
+	},
+	{
+		hlavny_text: 'La Plagne',
+		rozsireny_text: 'La Plagne, Mâcot-la-Plagne, Francúzsko',
+		text_obrazok: '2016'
+	},
+	{
+		hlavny_text: 'Chalkidiki - Kassandra',
+		rozsireny_text: 'Skala Fourkas, Chalkidiki - Kassandra, Grécko',
+		text_obrazok: '2016'
+	},
+	{
+		hlavny_text: 'Kitzsteinhorn Gletscher',
+		rozsireny_text: 'Kitzsteinhorn Gletscher, Kaprun, Rakúsko',
+		text_obrazok: '2017'
+	},
+	{
+		hlavny_text: 'Schmitten',
+		rozsireny_text: 'Schmitten, Zell am See, Rakúsko',
+		text_obrazok: '2017'
+	},
+	{
+		hlavny_text: 'Hurghada',
+		rozsireny_text: 'El Gouna, Hurghada, Egypt',
+		text_obrazok: '2017'
+	},
+	{
+		hlavny_text: 'Tauplitz',
+		rozsireny_text: 'Tauplitz, Tauplitzalm, Rakúsko',
+		text_obrazok: '2018'
+	},
+	{
+		hlavny_text: 'Lomnické sedlo',
+		rozsireny_text: 'Tatranská Lomnica, Vysoké Tatry, Slovensko',
+		text_obrazok: '2019'
+	},
+	{
+		hlavny_text: 'Nassfeld',
+		rozsireny_text: 'Nassfeld, Sonnenalpe Nassfeld, Rakúsko',
+		text_obrazok: '2019'
+	}
+
+
+]
