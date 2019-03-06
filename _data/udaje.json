@@ -1,9 +1,9 @@
 hlavne_polozky: [
 	{
-		meno: 'VZDELANIE',
+		meno: ':mortar_board: &emsp;&emsp; VZDELANIE',
 		polozky: [
 			{
-				titulok: '2016 - ',
+				titulok: '2016 - &emsp;&emsp;&nbsp;&nbsp; ',
 				popisy: [
 					{
 						titulok: 'Fakulta informatiky a informačných technológií, Slovenská technická univerzita v Bratislave, odbor Informatika'
@@ -21,7 +21,7 @@ hlavne_polozky: [
 		]
 	},
 	{
-		meno: 'ZAMESTNANIA',
+		meno: '&#x1F468&#x1F3FC&#x200D&#x1F4BB &emsp;&emsp; ZAMESTNANIA',
 		polozky: [
 			{
 				titulok: 'EMIS, s.r.o. (06/2018 - 08/2018)',
@@ -34,7 +34,7 @@ hlavne_polozky: [
 		]
 	},
 	{
-		meno: 'ZNALOSTI',
+		meno: ':notebook: &emsp;&emsp; ZNALOSTI',
 		polozky: [
 			{
 				titulok: 'Jazykové znalosti',
@@ -48,7 +48,7 @@ hlavne_polozky: [
 				]
 			},
 			{
-				titulok: 'Ostatné znalosti',
+				titulok: 'Počítačové znalosti',
 				popisy: [
 					{ 
 						titulok: 'C - pokročilý'
@@ -87,6 +87,14 @@ hlavne_polozky: [
 						titulok: 'Adobe Photoshop - základy'
 					}
 				
+				]
+			},
+			{
+				titulok: 'Vodičský preukaz',
+				popisy: [
+					{
+						titulok: 'sk. A, B'
+					}
 				]
 			}
 		]

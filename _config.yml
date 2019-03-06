@@ -5,3 +5,4 @@ url: "http://andrew141.github.io/" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - jemoji
