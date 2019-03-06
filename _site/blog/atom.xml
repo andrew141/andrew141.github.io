@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Andrej Hoferica's Blog</title>
+	<link href="http://andrew141.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://andrew141.github.io/blog"/>
+	<updated>2019-03-06T15:25:23+01:00</updated>
+	<id>http://andrew141.github.io/blog</id>
+	<author>
+		<name>Andrej Hoferica</name>
+		<email>andrej.hoferica@gmail.com</email>
+	</author>
+
+	
+		<entry>
+			<title>Andrej Hoferica, FIIT STU, Launches Site</title>
+			<link href="http://andrew141.github.io/blog/2019/02/21/andrej-hoferica-site-launched"/>
+			<updated>2019-02-21T00:00:00+01:00</updated>
+			<id>http://andrew141.github.io/blog/2019/02/21/andrej-hoferica-site-launched</id>
+			<content type="html">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.&lt;/p&gt;
+</content>
+		</entry>
+	
+
+</feed>

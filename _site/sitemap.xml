@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/blog/2019/02/21/andrej-hoferica-site-launched</loc>
+<lastmod>2019-02-21T16:17:30+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+<lastmod>2019-03-06T15:18:45+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
+<lastmod>2019-03-03T22:05:25+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/galeria/</loc>
+<lastmod>2019-03-03T22:05:25+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/cv/</loc>
+<lastmod>2019-03-03T22:05:25+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+<lastmod>2019-03-06T15:18:45+01:00</lastmod>
+</url>
+</urlset>
