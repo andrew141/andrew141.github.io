@@ -58,7 +58,7 @@ __Štýl:__
 
 [![](./down.png)  Stiahnuť dokumentáciu k zadaniu č. 1 vo formáte PDF](./dokumentacia.pdf)
 
-[![](./down.png)  Stiahnuť zadanie č. 1 ako ZIP archív](./Z1-xhofericaa.zip)
+[![](./down.png)  Stiahnuť zadanie č. 1 ako ZIP archív](http://andrew141.github.io/web_pub/Z1-xhofericaa.zip)
 
 
 [1]: (../data/zadanie1.zip)

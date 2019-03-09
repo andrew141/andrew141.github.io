@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/about/</loc>
-<lastmod>2019-03-06T18:26:40+01:00</lastmod>
+<lastmod>2019-03-09T20:39:13+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/galeria/</loc>
-<lastmod>2019-03-06T18:42:49+01:00</lastmod>
+<lastmod>2019-03-09T20:39:13+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cv/</loc>
@@ -14,15 +14,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
-<lastmod>2019-03-06T18:52:54+01:00</lastmod>
+<lastmod>2019-03-09T20:39:13+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/praca/</loc>
-<lastmod>2019-03-09T19:56:36+01:00</lastmod>
+<lastmod>2019-03-09T20:39:13+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/web_pub/</loc>
-<lastmod>2019-03-06T18:26:40+01:00</lastmod>
+<lastmod>2019-03-09T20:39:13+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/web_pub/dokumentacia.pdf</loc>
