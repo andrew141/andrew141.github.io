@@ -8,11 +8,26 @@
 		<body>
 			<nav>
 	<ul>
-		<li><a href="/">Domov</a></li>
-		<li><a href="/about">O mne</a></li>
-		<li><a href="/cv">CV</a></li>
-		<li><a href="/galeria">Galéria</a></li>
-		<li><a href="/web_pub">Webové publikovanie</a></li>
+		<li><a href="/"
+			
+				>Domov</a></li>
+		<li><a href="/about" 
+			
+				>O mne</a></li>
+		<li><a href="/cv"
+			
+				>CV</a></li>
+		<li><a href="/praca"
+			
+				>Moja práca</a></li>
+		<li><a href="/galeria"
+			
+				>Galéria</a></li>
+		<li><a href="/web_pub"
+			
+				style="text-decoration: underline;"
+			
+				>Webové publikovanie</a></li>
 	</ul>
 </nav>
 			<div class="container">
@@ -20,11 +35,75 @@
 			<h2 id="webové-publikovanie">Webové publikovanie</h2>
 <hr />
 
-<p>Toto je stránka venovaná predmetu Webové publikovanie a postupne sem budem pridávať svoje vypracované zadania. Tie bude možné stiahnuť ako ZIP archív.</p>
+<h3 id="dokumentácia-k-1-zadaniu-z-predmetu-webové-publikovanie">Dokumentácia k 1. zadaniu z predmetu Webové publikovanie</h3>
+
+<p><strong>Rozloženie (layouts):</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">default.html</code> je takým rodičovským layoutom, kde includujem menu s linkami na prekliky na ostatné podstránky, footer s odkazmi na moje internetové profily, použitie štýlu a kde vkladám samotný content, tento layout je použitý napríklad na podstránke <a href="/about">O mne</a>, Webové publikovanie a aj na <a href="/">hlavnej stránke</a></li>
+  <li>layout <code class="highlighter-rouge">cv.html</code> používam na podstránke so <a href="/cv">životopisom</a>, keďže svoj životopis som vyriešil formou neviditeľnej tabuľky</li>
+  <li>layout <code class="highlighter-rouge">work.html</code> používam na podstránke o <a href="/praca">mojej práci</a> na zadaniach, tvoria ho odrážky s obashom poľa na stránke <code class="highlighter-rouge">index.html</code> z priečinka ‘praca’</li>
+  <li>layout <code class="highlighter-rouge">gallery.html</code> je použitý na stránke s mojou <a href="/galeria">galériou</a>, najskôr obsahoval include so súborom na tvorbu galérie, ale neskôr som túto časť presunul do iného include súboru, keďže content stránky som chcel mať rozdelený na dve časti</li>
+</ul>
+
+<p><strong>Premenné v sídle:</strong></p>
+
+<ul>
+  <li>v template <code class="highlighter-rouge">gallery_template.html</code> - nadpis a suhlas, čo sú časti hlavnej stránky s galériou</li>
+  <li>v súbore <code class="highlighter-rouge">image-gallery.html</code> - cisloPolozky, ktorú používam ako index na prístup k obsahu údajového súboru, file (iterácia súborov v sídle), z tejto premennej sú potom odvodené ďalšie - file.path (link na daný obrázok), file.extname, filenameparts (rozdelenie cesty súboru), filename (alternatívny text k obrázku), popis fotky a linku a aj link samotný je tiež vypísaný cez premennú z dátového súboru <code class="highlighter-rouge">popisy_fotiek.json</code></li>
+</ul>
+
+<p> Premenné používam aj pri for cykloch alebo podmienkach, ako napr. pri iterácii údajového súboru a pri prístupe k jednotlivým častiam, alebo v <code class="highlighter-rouge">menu.html</code>, kde potrebujem zistiť, na ktorej stránke som, aby sa následne daný link podčiarkol.</p>
+
+<p><strong>Zoznam premenných:</strong></p>
+
+<p>nadpis, suhlas, cisloPolozky, file, site.static_files, file.path, include.folder, file.extname, filenameparts, filename, site.data.popisy_fotiek.metadata (a jej ďalšie zložky), page.title, content, site.data.udaje.hlavne_polozky (a jej ďalšie zložky), polozka (a jej ďalšie zložky), page.last_modified_at, page.zadania, odrazka, page.style</p>
+
+<p><strong>Filtre:</strong></p>
+
+<ul>
+  <li>v súbore <code class="highlighter-rouge">image-gallery.html</code>: split, last, replace, plus</li>
+  <li>v layoute <code class="highlighter-rouge">default.html</code>: date</li>
+</ul>
+
+<p><strong>Tagy:</strong></p>
+
+<p><code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">include</code>, <code class="highlighter-rouge">assign</code>, <code class="highlighter-rouge">capture</code></p>
+
+<p><strong>Dátové súbory:</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">popisy_fotiek.json</code> - využívam v galérií ako zdroj popisov a názvov</li>
+  <li><code class="highlighter-rouge">udaje.json</code> - v životopise sú všetky dáta brané z tohto súboru</li>
+</ul>
+
+<p><strong>Pluginy:</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">jekyll-sitemap</code> - vytvára mapu stránky v XML, funguje aj na Gite</li>
+  <li><code class="highlighter-rouge">jemoji</code> - v životopise pri hlavných názvoch mám aj primerane vhodné grafické emoji, taktiež funguje aj na Gite</li>
+  <li><code class="highlighter-rouge">jekyll-last-modofied-at</code> - na každej stránke je zobrazený dátum poslednej modifikácie stránky, funguje len na localhoste</li>
+</ul>
+
+<p><strong>Štýl:</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">main.css</code> - hlavný štýl, definované fonty, veľkosti a farby, taktiež definované stĺpce a riadky pre tabuľku v životopise</li>
+</ul>
+
+<p> Štýly som mal 3, trochu som s nimi experimentoval, no nakoniec som sa rozhodol všetko zjednotiť (typ fontu, veľkosť textu, farbu textu, šírku obrazovky, zarovnanie) pre lepšiu konzistenciu a krajší vzhľad.</p>
+
+<p> Na stránkach <a href="/praca">Moja práca</a> a Webové publikovanie používam Markdown.</p>
+
+<hr />
+
+<p><a href="./dokumentacia.pdf"><img src="./down.png" alt="" />  Stiahnuť dokumentáciu k zadaniu č. 1 vo formáte PDF</a></p>
+
+<p><a href="./Z1-xhofericaa.zip"><img src="./down.png" alt="" />  Stiahnuť zadanie č. 1 ako ZIP archív</a></p>
 
 
 			
-			</div><!-- /.container -->
+			</div>
 			<br>
 			<br>
 			<br>

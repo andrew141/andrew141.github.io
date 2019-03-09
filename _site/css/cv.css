@@ -1,6 +1,6 @@
 body {
     margin: 60px auto;
-    width: 80%;
+    width: 70%;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -17,7 +17,7 @@ a {
     color: #999;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 h1 {
     font-size: 3em;

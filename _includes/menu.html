@@ -1,9 +1,34 @@
 <nav>
 	<ul>
-		<li><a href="/">Domov</a></li>
-		<li><a href="/about">O mne</a></li>
-		<li><a href="/cv">CV</a></li>
-		<li><a href="/galeria">Galéria</a></li>
-		<li><a href="/web_pub">Webové publikovanie</a></li>
+		<li><a href="/"
+			{% if page.title == "Andrej Hoferica" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>Domov</a></li>
+		<li><a href="/about" 
+			{% if page.title == "Andrej Hoferica - O mne" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>O mne</a></li>
+		<li><a href="/cv"
+			{%if page.title == "Andrej Hoferica - Životopis" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>CV</a></li>
+		<li><a href="/praca"
+			{% if page.title == "Andrej Hoferica - Moja práca" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>Moja práca</a></li>
+		<li><a href="/galeria"
+			{% if page.title == "Andrej Hoferica - Galéria" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>Galéria</a></li>
+		<li><a href="/web_pub"
+			{% if page.title == "Andrej Hoferica - Webové publikovanie" %}
+				style="text-decoration: underline;"
+			{% endif %}
+				>Webové publikovanie</a></li>
 	</ul>
 </nav>
