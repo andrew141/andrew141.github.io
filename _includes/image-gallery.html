@@ -18,7 +18,7 @@
 				<img src="//images.weserv.nl/?url=andrew141.github.io/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" 
 					alt="{{ filename }}" 
 					title="{{ site.data.popisy_fotiek.metadata[cisloPolozky].rozsireny_text }}, {{ site.data.popisy_fotiek.metadata[cisloPolozky].text_obrazok }}" />
-				<span>{{ site.data.popisy_fotiek.metadata[cisloPolozky].hlavny_text }}</span>
+				<span style="font-size: 0.85em;>{{ site.data.popisy_fotiek.metadata[cisloPolozky].hlavny_text }}</span>
 				</a>
 				{% assign cisloPolozky = cisloPolozky | plus: 1 %}
 			{% endif %}
