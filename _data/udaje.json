@@ -93,7 +93,7 @@ hlavne_polozky: [
 				titulok: 'Vodičský preukaz',
 				popisy: [
 					{
-						titulok: 'sk. A, B'
+						titulok: 'sk. A1, B'
 					}
 				]
 			}
