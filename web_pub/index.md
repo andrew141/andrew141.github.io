@@ -6,6 +6,18 @@ style: main
 ## Webové publikovanie
 ---
 
+### Dokumentácia k 2. zadaniu z predmetu Webové publikovanie
+
+&emsp;V dokumente DocBook týkajúcom sa zadania č. 2 som použil niekoľko základných elementov, ako napr. `<book>`, `<bookinfo>`, `<abstract>`, `<chapter>`, `<section>`, `<title>`, `<para>`, `<caption>`, `<emphasis>`, `<bibliography>` či `<appendix>`. Čo sa týka atribútov, tie som použil napríklad pri odkazoch na iné časti dokumentu, pri deklarovaní jazyka sekcie/knihy, číslovaní v dokumente, pri type zvýraznenia textu, pri načítavaní obrázka do dokumentu alebo pri deklarácii tabuľky. 
+
+- Zvýraznenie slov kurzívou je použité na strane 10 a 11 pod obrázkami a na strane 19 cez klasický `<emphasis>`. Okrem toho som použil zvýraznenie slov tučným písmom na strane 15 prostredníctvom `<emphasis role="strong">`.
+- Odkazy na iné časti dokumentu môžeme vidieť, samozrejme, v obsahu, ale aj priamo v texte, kde sa nachádzajú citácie. Tie sú tvorené elementom `<xref linkend="bib.1"/>`, kde `bib.1` je id položky v bibliografii. Dva odkazy na URL sú použité v bibliografii ako element `<ulink>`.
+- Poznámky pod čiarou sa nachádzajú na strane 12 a 18 (spolu ich je 5). Vytvoril som ich elementom `<footnote>`.
+- Obrázky nájdeme na stranách 10 a 11, tabuľku na strane 18. Ich zoznam je na strane 20 ako príloha. Obrázky s popisom sú vložené do jedného elementu `<mediaobject>`.
+- Register pojmov je v samostatnej poslednej kapitole v závere dokumentu na strane 19. Obsahuje dvojúrovňový zoznam pojmov s linkami na sekcie, kde sa pojmy nachádzajú. Tu sú linky tvorené elementami `<link linkend="tag_sekcie">`.
+
+---
+
 ### Dokumentácia k 1. zadaniu z predmetu Webové publikovanie
 
 **Rozloženie (layouts):**
@@ -60,7 +72,4 @@ __Štýl:__
 
 [![](./down.png)  Stiahnuť zadanie č. 1 ako ZIP archív](http://andrew141.github.io/web_pub/Z1-xhofericaa.zip)
 
-
-[1]: (../data/zadanie1.zip)
-[2]: (../data/zadanie2.zip)
-[3]: (../data/zadanie3.zip)
+[![](./down.png)  Stiahnuť zadanie č. 2 ako ZIP archív](http://andrew141.github.io/web_pub/Z2-xhofericaa.zip)

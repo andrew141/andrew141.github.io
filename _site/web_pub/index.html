@@ -35,6 +35,20 @@
 			<h2 id="webové-publikovanie">Webové publikovanie</h2>
 <hr />
 
+<h3 id="dokumentácia-k-2-zadaniu-z-predmetu-webové-publikovanie">Dokumentácia k 2. zadaniu z predmetu Webové publikovanie</h3>
+
+<p> V dokumente DocBook týkajúcom sa zadania č. 2 som použil niekoľko základných elementov, ako napr. <code class="highlighter-rouge">&lt;book&gt;</code>, <code class="highlighter-rouge">&lt;bookinfo&gt;</code>, <code class="highlighter-rouge">&lt;abstract&gt;</code>, <code class="highlighter-rouge">&lt;chapter&gt;</code>, <code class="highlighter-rouge">&lt;section&gt;</code>, <code class="highlighter-rouge">&lt;title&gt;</code>, <code class="highlighter-rouge">&lt;para&gt;</code>, <code class="highlighter-rouge">&lt;caption&gt;</code>, <code class="highlighter-rouge">&lt;emphasis&gt;</code>, <code class="highlighter-rouge">&lt;bibliography&gt;</code> či <code class="highlighter-rouge">&lt;appendix&gt;</code>. Čo sa týka atribútov, tie som použil napríklad pri odkazoch na iné časti dokumentu, pri deklarovaní jazyka sekcie/knihy, číslovaní v dokumente, pri type zvýraznenia textu, pri načítavaní obrázka do dokumentu alebo pri deklarácii tabuľky.</p>
+
+<ul>
+  <li>Zvýraznenie slov kurzívou je použité na strane 10 a 11 pod obrázkami a na strane 19 cez klasický <code class="highlighter-rouge">&lt;emphasis&gt;</code>. Okrem toho som použil zvýraznenie slov tučným písmom na strane 15 prostredníctvom <code class="highlighter-rouge">&lt;emphasis role="strong"&gt;</code>.</li>
+  <li>Odkazy na iné časti dokumentu môžeme vidieť, samozrejme, v obsahu, ale aj priamo v texte, kde sa nachádzajú citácie. Tie sú tvorené elementom <code class="highlighter-rouge">&lt;xref linkend="bib.1"/&gt;</code>, kde <code class="highlighter-rouge">bib.1</code> je id položky v bibliografii. Dva odkazy na URL sú použité v bibliografii ako element <code class="highlighter-rouge">&lt;ulink&gt;</code>.</li>
+  <li>Poznámky pod čiarou sa nachádzajú na strane 12 a 18 (spolu ich je 5). Vytvoril som ich elementom <code class="highlighter-rouge">&lt;footnote&gt;</code>.</li>
+  <li>Obrázky nájdeme na stranách 10 a 11, tabuľku na strane 18. Ich zoznam je na strane 20 ako príloha. Obrázky s popisom sú vložené do jedného elementu <code class="highlighter-rouge">&lt;mediaobject&gt;</code>.</li>
+  <li>Register pojmov je v samostatnej poslednej kapitole v závere dokumentu na strane 19. Obsahuje dvojúrovňový zoznam pojmov s linkami na sekcie, kde sa pojmy nachádzajú. Tu sú linky tvorené elementami <code class="highlighter-rouge">&lt;link linkend="tag_sekcie"&gt;</code>.</li>
+</ul>
+
+<hr />
+
 <h3 id="dokumentácia-k-1-zadaniu-z-predmetu-webové-publikovanie">Dokumentácia k 1. zadaniu z predmetu Webové publikovanie</h3>
 
 <p><strong>Rozloženie (layouts):</strong></p>
@@ -101,6 +115,7 @@
 
 <p><a href="http://andrew141.github.io/web_pub/Z1-xhofericaa.zip"><img src="./down.png" alt="" />  Stiahnuť zadanie č. 1 ako ZIP archív</a></p>
 
+<p><a href="http://andrew141.github.io/web_pub/Z2-xhofericaa.zip"><img src="./down.png" alt="" />  Stiahnuť zadanie č. 2 ako ZIP archív</a></p>
 
 			
 			</div>
