@@ -6,6 +6,69 @@ style: main
 ## Webové publikovanie
 ---
 
+### Dokumentácia k 3. zadaniu z predmetu Webové publikovanie
+
+&emsp;Na opis typu dokumentu som si vybral DTD. Elementov používam niekoľko, skúsim ich v stručnosti opísať:
+- `<slideshow>` - hlavný koreňový element prezentácie zoskupujúci jednotlivé "slajdy"
+- `<slide>` - ako už názov napovedá, je to element na zoskupenie častí v slajde, všetko v tomto elemente sa zobrazí na jednej stránke
+- `<titulok>`, `<nadpis>` - elementy na zobrazenie nadpisu slajdu, každý slajd musí obsaovať jeden zo spomenutých elementov, rozdiel medzi nimi je ten, že `<nadpis>` je zobrazený len v hornej časti obrazovky, obsahuje iba text a elementu `<titulok>` môžeme zadávať parametre veľkosť písma a padding zhora, ktoré ale nie sú nevyhnutne potrebné
+- `<telo>` - v tomto elemente budú všetky časti slajdu okrem titulku alebo nadpisu, môže obsahovať prakticky všetky ostatné elementy, ako napr. `<zarovnaj>`, `<zoznam>`, `<hruby_zoznam>`, `<obrazok>`, `<video>` alebo elementy `<lava_strana>` a `<prava_strana>`, od nadpisu alebo titulku je telo oddelené horizontálnou čiarou
+- `<zarovnaj>` - element, v ktorom všetko bude zarovnané tak, ako bude napísané v atribúte, t.j. vľavo, vpravo, na stred alebo roztiahnuté na šírku obrazovky, v elemente môžeme mať odsek, video alebo obrázok
+- `<zoznam>`, `<hruby_zoznam>` - elementy na zobrazenie nejakého nečíslovaného obsahu, oba robia to isté, len sa inak zobrazujú, rozdiel je v type písma, v jeho veľkosti a v riadkovaní
+- `<polozka>` - obsahuje len text a je to element na zobrazenie ďalšej položky v jednom zo zoznamov
+- `<obrazok>` - element na zobrazenie obrázka, musí obsahovať element `<zdroj>`
+- `<video>` - element na zobrazenie videa v prehliadači, musí obsahovať element `<zdroj>`
+- `<zdroj>` - obsahuje len názov súboru, ktorý je v priečinku `data`, toto smerovanie do priečinka `data` je vykonávané v šablóne, nie je potrebné zadávať absolútnu alebo relatívnu cestu, stačí názov súboru na zobrazenie
+- `<typ>` - element na špecifikovanie typu videa, pre `.mp4` video je typ `video/mp4`
+- `<p>` - štandardný element na odsek (resp. paragraph), musí obsahovať len text a môže mať jeden atribút - veľkosť písma v pixeloch, ak nie je atribút zadaný, je predvolene nastavená veľkosť písma na 20 px
+- `<lava_strana>`, `<prava_strana>` - elementy na rozdelenie obrazovky na polovice, môžu obsahovať to isté čo element `<telo>`, len s tým rozdielom, že sa to zobrazí na príslušnej strane, použitie je výhodné vtedy, ak chceme do slajdu k textu pridať obrázok alebo video, pretože sa zobrazí na vyhradenej polovici obrazovky a text bude zalomený v ostatnej časti
+
+&emsp;Ukážkovú XML prezentáciu je možné nájsť v súbore `source.xml`, tento dokument je valídny, overil som ho na [tejto](https://www.xmlvalidation.com) stránke.
+
+&emsp;XSL transformácie som navrhol pre všetky elementy, parametrizovať je možné elementy `<p>`, `<titulok>` a `<zarovnaj>`. 
+- `<nadpis>` a `<titulok>` sú písané štýlom Heading 1
+- `<telo>` pred spracovním ďalších elementov zobrazí najskôr horizontálnu čiaru
+- `<hruby_zoznam>` je písaný štýlom Heading 4 a veľkosťou písma 25px s riadkovaním 1,8
+- `<zoznam>` je písaný štandardným písmom veľkosťou 20px, pokiaľ nie je zadaná iná veľkosť písma, a s riadkovaním 1,5
+- na zalomenie častí slajdu v elementoch `<lava_strana>` a `<prava_strana>` sa využíva percentuálne rozloženie z CSS súboru
+- v súbore s transformáciami je ako posledná uvedená transformácia s názvom `loop`, ktorá je takým automatizovaným "for-cyklom" na generovanie navigácie v spodnej časti slajdu s linkami na ostatné slajdy, resp. na ďalší/predchádzajúci slajd
+
+&emsp;XSL transformácie môžete nájsť v súbore `sablona.xsl`. Do hlavičky každého `.xhtml` súboru sa vložia potrebné deklarácie, ako aj cesty k CSS štýlom, resp. súboru. Na "krajšie" zobrazenie používam voľne dostupný bootstrap, ktorý som si upravil pre potreby prezentácie a rozšíril o svoje ďalšie štýly (rozdelenie obrazoviek, formátovanie obrázka/videa, štýl liniek). Deklarácia týchto štýlov sa nachádza v súbore `my_css.css`. Každý slajd sa generuje do vlastného `.xhtml` súboru do priečinka `html_pages`. Obrázky a videá sa nachádzajú v priečinku `data`.
+
+**Generovanie XHTML stránok**
+
+Na generovanie som používal Saxon verzie 9 spolu so skriptom od kolegu. Saxonu sú dodané dva súbory - zdrojová XML prezentácia a súbor s XSL transformáciami. Na spustenie skriptu stačí mať skript, XML a XSL súbor v rovnakom priečinku, nasmerovať Terminál do tohto priečinka a už len zadať príkaz `make`.
+
+**Štruktúra odovzdaného .zip archívu**
+
+```
+- css
+	- my_css.css
+- data
+	- flaming.png 
+	- IMG_1005.mp4
+	- kybersikana.png
+	- oko.png
+	- ruleta.png
+	- hadka.png
+- html_pages
+	- result_1.xhtml
+	- result_2.xhtml
+	- result_3.xhtml
+	- result_4.xhtml
+	- result_5.xhtml
+	- result_6.xhtml
+	- result_7.xhtml
+	- result_8.xhtml
+	- result_9.xhtml
+- zdroje
+	- makefile
+	- sablona.xsl
+	- source.xml
+- _Z3-hoferica.txt
+```
+---
+
 ### Dokumentácia k 2. zadaniu z predmetu Webové publikovanie
 
 &emsp;V dokumente DocBook týkajúcom sa zadania č. 2 som použil niekoľko základných elementov, ako napr. `<book>`, `<bookinfo>`, `<abstract>`, `<chapter>`, `<section>`, `<title>`, `<para>`, `<caption>`, `<emphasis>`, `<bibliography>` či `<appendix>`. Čo sa týka atribútov, tie som použil napríklad pri odkazoch na iné časti dokumentu, pri deklarovaní jazyka sekcie/knihy, číslovaní v dokumente, pri type zvýraznenia textu, pri načítavaní obrázka do dokumentu alebo pri deklarácii tabuľky. 

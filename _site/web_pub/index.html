@@ -35,6 +35,72 @@
 			<h2 id="webové-publikovanie">Webové publikovanie</h2>
 <hr />
 
+<h3 id="dokumentácia-k-3-zadaniu-z-predmetu-webové-publikovanie">Dokumentácia k 3. zadaniu z predmetu Webové publikovanie</h3>
+
+<p> Na opis typu dokumentu som si vybral DTD. Elementov používam niekoľko, skúsim ich v stručnosti opísať:</p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;slideshow&gt;</code> - hlavný koreňový element prezentácie zoskupujúci jednotlivé “slajdy”</li>
+  <li><code class="highlighter-rouge">&lt;slide&gt;</code> - ako už názov napovedá, je to element na zoskupenie častí v slajde, všetko v tomto elemente sa zobrazí na jednej stránke</li>
+  <li><code class="highlighter-rouge">&lt;titulok&gt;</code>, <code class="highlighter-rouge">&lt;nadpis&gt;</code> - elementy na zobrazenie nadpisu slajdu, každý slajd musí obsaovať jeden zo spomenutých elementov, rozdiel medzi nimi je ten, že <code class="highlighter-rouge">&lt;nadpis&gt;</code> je zobrazený len v hornej časti obrazovky, obsahuje iba text a elementu <code class="highlighter-rouge">&lt;titulok&gt;</code> môžeme zadávať parametre veľkosť písma a padding zhora, ktoré ale nie sú nevyhnutne potrebné</li>
+  <li><code class="highlighter-rouge">&lt;telo&gt;</code> - v tomto elemente budú všetky časti slajdu okrem titulku alebo nadpisu, môže obsahovať prakticky všetky ostatné elementy, ako napr. <code class="highlighter-rouge">&lt;zarovnaj&gt;</code>, <code class="highlighter-rouge">&lt;zoznam&gt;</code>, <code class="highlighter-rouge">&lt;hruby_zoznam&gt;</code>, <code class="highlighter-rouge">&lt;obrazok&gt;</code>, <code class="highlighter-rouge">&lt;video&gt;</code> alebo elementy <code class="highlighter-rouge">&lt;lava_strana&gt;</code> a <code class="highlighter-rouge">&lt;prava_strana&gt;</code>, od nadpisu alebo titulku je telo oddelené horizontálnou čiarou</li>
+  <li><code class="highlighter-rouge">&lt;zarovnaj&gt;</code> - element, v ktorom všetko bude zarovnané tak, ako bude napísané v atribúte, t.j. vľavo, vpravo, na stred alebo roztiahnuté na šírku obrazovky, v elemente môžeme mať odsek, video alebo obrázok</li>
+  <li><code class="highlighter-rouge">&lt;zoznam&gt;</code>, <code class="highlighter-rouge">&lt;hruby_zoznam&gt;</code> - elementy na zobrazenie nejakého nečíslovaného obsahu, oba robia to isté, len sa inak zobrazujú, rozdiel je v type písma, v jeho veľkosti a v riadkovaní</li>
+  <li><code class="highlighter-rouge">&lt;polozka&gt;</code> - obsahuje len text a je to element na zobrazenie ďalšej položky v jednom zo zoznamov</li>
+  <li><code class="highlighter-rouge">&lt;obrazok&gt;</code> - element na zobrazenie obrázka, musí obsahovať element <code class="highlighter-rouge">&lt;zdroj&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;video&gt;</code> - element na zobrazenie videa v prehliadači, musí obsahovať element <code class="highlighter-rouge">&lt;zdroj&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;zdroj&gt;</code> - obsahuje len názov súboru, ktorý je v priečinku <code class="highlighter-rouge">data</code>, toto smerovanie do priečinka <code class="highlighter-rouge">data</code> je vykonávané v šablóne, nie je potrebné zadávať absolútnu alebo relatívnu cestu, stačí názov súboru na zobrazenie</li>
+  <li><code class="highlighter-rouge">&lt;typ&gt;</code> - element na špecifikovanie typu videa, pre <code class="highlighter-rouge">.mp4</code> video je typ <code class="highlighter-rouge">video/mp4</code></li>
+  <li><code class="highlighter-rouge">&lt;p&gt;</code> - štandardný element na odsek (resp. paragraph), musí obsahovať len text a môže mať jeden atribút - veľkosť písma v pixeloch, ak nie je atribút zadaný, je predvolene nastavená veľkosť písma na 20 px</li>
+  <li><code class="highlighter-rouge">&lt;lava_strana&gt;</code>, <code class="highlighter-rouge">&lt;prava_strana&gt;</code> - elementy na rozdelenie obrazovky na polovice, môžu obsahovať to isté čo element <code class="highlighter-rouge">&lt;telo&gt;</code>, len s tým rozdielom, že sa to zobrazí na príslušnej strane, použitie je výhodné vtedy, ak chceme do slajdu k textu pridať obrázok alebo video, pretože sa zobrazí na vyhradenej polovici obrazovky a text bude zalomený v ostatnej časti</li>
+</ul>
+
+<p> Ukážkovú XML prezentáciu je možné nájsť v súbore <code class="highlighter-rouge">source.xml</code>, tento dokument je valídny, overil som ho na <a href="https://www.xmlvalidation.com">tejto</a> stránke.</p>
+
+<p> XSL transformácie som navrhol pre všetky elementy, parametrizovať je možné elementy <code class="highlighter-rouge">&lt;p&gt;</code>, <code class="highlighter-rouge">&lt;titulok&gt;</code> a <code class="highlighter-rouge">&lt;zarovnaj&gt;</code>.</p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;nadpis&gt;</code> a <code class="highlighter-rouge">&lt;titulok&gt;</code> sú písané štýlom Heading 1</li>
+  <li><code class="highlighter-rouge">&lt;telo&gt;</code> pred spracovním ďalších elementov zobrazí najskôr horizontálnu čiaru</li>
+  <li><code class="highlighter-rouge">&lt;hruby_zoznam&gt;</code> je písaný štýlom Heading 4 a veľkosťou písma 25px s riadkovaním 1,8</li>
+  <li><code class="highlighter-rouge">&lt;zoznam&gt;</code> je písaný štandardným písmom veľkosťou 20px, pokiaľ nie je zadaná iná veľkosť písma, a s riadkovaním 1,5</li>
+  <li>na zalomenie častí slajdu v elementoch <code class="highlighter-rouge">&lt;lava_strana&gt;</code> a <code class="highlighter-rouge">&lt;prava_strana&gt;</code> sa využíva percentuálne rozloženie z CSS súboru</li>
+  <li>v súbore s transformáciami je ako posledná uvedená transformácia s názvom <code class="highlighter-rouge">loop</code>, ktorá je takým automatizovaným “for-cyklom” na generovanie navigácie v spodnej časti slajdu s linkami na ostatné slajdy, resp. na ďalší/predchádzajúci slajd</li>
+</ul>
+
+<p> XSL transformácie môžete nájsť v súbore <code class="highlighter-rouge">sablona.xsl</code>. Do hlavičky každého <code class="highlighter-rouge">.xhtml</code> súboru sa vložia potrebné deklarácie, ako aj cesty k CSS štýlom, resp. súboru. Na “krajšie” zobrazenie používam voľne dostupný bootstrap, ktorý som si upravil pre potreby prezentácie a rozšíril o svoje ďalšie štýly (rozdelenie obrazoviek, formátovanie obrázka/videa, štýl liniek). Deklarácia týchto štýlov sa nachádza v súbore <code class="highlighter-rouge">my_css.css</code>. Každý slajd sa generuje do vlastného <code class="highlighter-rouge">.xhtml</code> súboru do priečinka <code class="highlighter-rouge">html_pages</code>. Obrázky a videá sa nachádzajú v priečinku <code class="highlighter-rouge">data</code>.</p>
+
+<p><strong>Generovanie XHTML stránok</strong></p>
+
+<p>Na generovanie som používal Saxon verzie 9 spolu so skriptom od kolegu. Saxonu sú dodané dva súbory - zdrojová XML prezentácia a súbor s XSL transformáciami. Na spustenie skriptu stačí mať skript, XML a XSL súbor v rovnakom priečinku, nasmerovať Terminál do tohto priečinka a už len zadať príkaz <code class="highlighter-rouge">make</code>.</p>
+
+<p><strong>Štruktúra odovzdaného .zip archívu</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- css
+	- my_css.css
+- data
+	- flaming.png 
+	- IMG_1005.mp4
+	- kybersikana.png
+	- oko.png
+	- ruleta.png
+	- hadka.png
+- html_pages
+	- result_1.xhtml
+	- result_2.xhtml
+	- result_3.xhtml
+	- result_4.xhtml
+	- result_5.xhtml
+	- result_6.xhtml
+	- result_7.xhtml
+	- result_8.xhtml
+	- result_9.xhtml
+- zdroje
+	- makefile
+	- sablona.xsl
+	- source.xml
+- _Z3-hoferica.txt
+</code></pre></div></div>
+<hr />
+
 <h3 id="dokumentácia-k-2-zadaniu-z-predmetu-webové-publikovanie">Dokumentácia k 2. zadaniu z predmetu Webové publikovanie</h3>
 
 <p> V dokumente DocBook týkajúcom sa zadania č. 2 som použil niekoľko základných elementov, ako napr. <code class="highlighter-rouge">&lt;book&gt;</code>, <code class="highlighter-rouge">&lt;bookinfo&gt;</code>, <code class="highlighter-rouge">&lt;abstract&gt;</code>, <code class="highlighter-rouge">&lt;chapter&gt;</code>, <code class="highlighter-rouge">&lt;section&gt;</code>, <code class="highlighter-rouge">&lt;title&gt;</code>, <code class="highlighter-rouge">&lt;para&gt;</code>, <code class="highlighter-rouge">&lt;caption&gt;</code>, <code class="highlighter-rouge">&lt;emphasis&gt;</code>, <code class="highlighter-rouge">&lt;bibliography&gt;</code> či <code class="highlighter-rouge">&lt;appendix&gt;</code>. Čo sa týka atribútov, tie som použil napríklad pri odkazoch na iné časti dokumentu, pri deklarovaní jazyka sekcie/knihy, číslovaní v dokumente, pri type zvýraznenia textu, pri načítavaní obrázka do dokumentu alebo pri deklarácii tabuľky.</p>
@@ -122,7 +188,7 @@
 			<br>
 			<br>
 			<br>
-			<p style="font-size: 10pt;">09.03.2019</p>
+			<p style="font-size: 10pt;">24.03.2019</p>
 		<footer>
     		<ul>
 	<li><a href="mailto:andrej.hoferica@gmail.com" title="E-mail"><i class="fas fa-at fa-2x"></i></a></li>
