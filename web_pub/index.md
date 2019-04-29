@@ -136,3 +136,5 @@ __Štýl:__
 [![](./down.png)  Stiahnuť zadanie č. 1 ako ZIP archív](http://andrew141.github.io/web_pub/Z1-xhofericaa.zip)
 
 [![](./down.png)  Stiahnuť zadanie č. 2 ako ZIP archív](http://andrew141.github.io/web_pub/Z2-xhofericaa.zip)
+
+[![](./down.png)  Stiahnuť zadanie č. 3 ako ZIP archív](http://andrew141.github.io/web_pub/Z3-xhofericaa.zip)
